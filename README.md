@@ -10,7 +10,14 @@
 	```zsh
 	echo 'export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"' >> ~/.zshrc
 	```
+<br />
 
+## ハードウェアシミュレータの起動
+* 以下コマンドでハードウェアシミュレータを起動する.
+	```zsh
+	sh [path to HardwareSimulator.sh]
+	```
+<br />
 
 
 ## サポートページとリファレンス
