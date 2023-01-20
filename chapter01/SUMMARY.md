@@ -72,6 +72,38 @@
 * ハードウェア設計者は、回路の正確性に加えて、処理速度、エネルギー消費量、回路設計全体のコストなどについても注意を払う.
 <br />
 
+## NAND・NOT・AND・OR
+* NAND
+	| A | B | OUT |
+	| - | - | --- |
+	| 0 | 0 | 1   |
+	| 0 | 1 | 1   |
+	| 1 | 0 | 1   |
+	| 1 | 1 | 0   |
+* NOT
+	| IN | OUT |
+	| -- | --- |
+	| 0  | 1   |
+	| 1  | 0   |
+* AND
+	| A | B | OUT |
+	| - | - | --- |
+	| 0 | 0 | 0   |
+	| 0 | 1 | 0   |
+	| 1 | 0 | 0   |
+	| 1 | 1 | 1   |
+	* NOT(NAND(A, B))
+* OR
+	| A | B | OUT |
+	| - | - | --- |
+	| 0 | 0 | 0   |
+	| 0 | 1 | 1   |
+	| 1 | 0 | 1   |
+	| 1 | 1 | 1   |
+	* NAND(NOT(A), NOT(B))
+	* [ORをNANDで構成](http://www.setsunan.ac.jp/~shikama/LogicCircuits2009/2017LCB_10.pdf)
+<br />
+
 ## 実装リファレンス
 * [NANDゲートだけでNOT、AND、OR、NOR、XORを構成する](https://nitomath.hatenablog.jp/entry/2020/08/13/215947)
 * [セキュリティ・キャンプ キャンパー育成枠の活動録](https://genkai-io.hatenablog.jp/entry/2018/11/09/150754)
