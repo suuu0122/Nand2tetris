@@ -48,5 +48,5 @@
 <a id="reference"></a>
 
 ## 実装リファレンス
-* [セキュリティ・キャンプ キャンパー育成枠の活動録](https://genkai-io.hatenablog.jp/entry/2018/11/09/150754)
+* [セキュリティ・キャンプ キャンパー育成枠の活動録](https://genkai-io.hatenablog.jp/entry/2018/11/14/111204)
 * [コンピュータシステムの理論と実装の1〜5章のハードウェアを実装しました（ネタバレ注意）](https://nihemak.hatenablog.com/entry/2019/04/28/150541#Not)
