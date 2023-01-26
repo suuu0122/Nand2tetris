@@ -9,6 +9,7 @@
 * [アセンブリ](#assembly)
 * [算術演算と論理演算](#arithmetic-and-logical-operations)
 * [メモリアクセス](#memory-access)
+* [分岐命令](branch-instruction)
 * [実装リファレンス](#reference)
 
 <a id="overview"></a>
@@ -112,6 +113,40 @@
 		LOAD R2 R1		// R2 <- Memory[R1]
 		STR R2 x		// x <- R2
 		```
+<br />
+
+<a id="branch-instruction"></a>
+
+## 分岐命令
+* 分岐命令には、以下のようなものがある.
+	* 反復
+		* ループ処理の開始位置に戻る.
+	* 条件分岐
+		* もし条件がfasleであれば、「if-then節」の後ろにある位置に移動する.
+	* サブルーチン呼び出し
+		* あるコードセグメントの最初のコマンドに移動する.
+		* [サブルーチン](https://e-words.jp/w/%E3%82%B5%E3%83%96%E3%83%AB%E3%83%BC%E3%83%81%E3%83%B3.html)とは、コンピュータプログラムの中で特定の機能や処理をひとまとまりの集合として定義し、他の箇所から呼び出して実行できるようにしたもの.
+* 高水準/低水準における分岐ロジック
+	* 高水準
+		```
+		// whileループ
+		while (R1 >= 0) {
+			code segment 1
+		}
+		code segment 2
+		```
+	* 低水準
+		```
+		// 一般的な変換
+		beginWhile:
+			JNG R1 endWhile		// もしR1<0であればendWhileへ移動
+			// 「code segment 1」の変換コードはここにくる
+			JMP beginWhile		// beginWhileへ移動
+		endWhile:
+			// 「code segment 2」の変換コードはここにくる
+		```
+		* 「JMP beginWhile」のような **無条件分岐** を行うコマンドは、目的とする位置のアドレスだけを指定する.
+		* 「JNG R1 endWhile」のような **条件分岐** では、ブール条件も何らかの方法で指定しなければならない.
 <br />
 
 <a id="reference"></a>
