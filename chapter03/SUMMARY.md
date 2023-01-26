@@ -1,4 +1,4 @@
-# Chapter02-ブール算術
+# Chapter03-順序回路
 
 ## インデックス
 * [概要](#overview)
